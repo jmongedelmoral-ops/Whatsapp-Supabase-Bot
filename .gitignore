@@ -1,0 +1,7 @@
+# Archivo de credenciales privadas (¡NUNCA SUBIR!)
+.env
+
+# Archivos basura de compilación de Java y VS Code
+/target/
+/.vscode/
+*.class
