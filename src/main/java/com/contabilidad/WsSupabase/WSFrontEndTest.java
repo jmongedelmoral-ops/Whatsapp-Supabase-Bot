@@ -8,6 +8,8 @@ import com.google.gson.Gson;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
 
+import io.github.cdimascio.dotenv.Dotenv;
+
 
 /**
  * <h2>Código para probar al bot de whatsapp:</h2>
@@ -26,6 +28,8 @@ import io.javalin.http.Context;
 
 public class WSFrontEndTest {
     public static void main(String[] args) {
+
+
 
         //Se crea el Javalin en el mismo puerto de pruebas
         Javalin app = Javalin.create().start(8080);

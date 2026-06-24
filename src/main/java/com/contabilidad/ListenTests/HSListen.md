@@ -14,6 +14,6 @@
 ### Comando de Simulación Local
 ```
 
-curl -i "http://localhost:port/?hub.mode=subscribe&hub.challenge=test_val&hub.verify_token=3EZ1bzD17Wc9nyEWOzvRRZ7rCO6_7Z17fwumV5YW55eqXhmpJ"
+curl -i "http://localhost:port/?hub.mode=subscribe&hub.challenge=test_val&hub.verify_token=verifyToken"
 ```
 

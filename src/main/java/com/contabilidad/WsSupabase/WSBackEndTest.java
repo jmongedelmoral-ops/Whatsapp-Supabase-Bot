@@ -468,6 +468,15 @@ public class WSBackEndTest {
   // Método que manda el URL al usuario
   public static int mandarURLAlUsuario(String urlHtml) {
 
+
+    //Declaraciones .env
+
+    Dotenv dotenv = Dotenv.load();
+    
+    String urlMeta = dotenv.get("URL_META");
+    String apiKeyMeta = dotenv.get("API_KEY_META");
+
+
     // Json para mostrar botones al usuario en whatsapp
 
     String jsonUrl = construirJsonDelUrl(urlHtml);
@@ -475,7 +484,7 @@ public class WSBackEndTest {
     // Creacion del request Builder
 
     // La dirección a la que irá el request
-    URI uri = URI.create("https://graph.facebook.com/v25.0/1196398723546100/messages");
+    URI uri = URI.create(urlMeta);
 
     // Headers necesarios
 
@@ -487,7 +496,7 @@ public class WSBackEndTest {
     // Header para Autorización
     String claveMeta2 = "Authorization";
     // Clave para que meta sepa que somos nosotros
-    String valorMeta2 = "Bearer EAA8RZCYAC1gcBRgzLSuRD93yus9Go8AHZCZCZAB1tZAZBJIkx0wS5pmVbdvbgXvxnCMZBJnlBoYt5W6fXANMsZAMKrDFuRUZBXULbS6SqwLF5ngBQrLiL6FE6MXyH0i0JM2B5tBlCyNXYxcYuBGOo3ylHWbGKjD8mcv61hDLogXg6gLTuJb1sXXKwgZAAwtJ7wyQZDZD";
+    String valorMeta2 = "Bearer" +apiKeyMeta;
 
     // Request Builder
     HttpRequest.Builder rqstBldrSpbs = HttpRequest.newBuilder(uri);

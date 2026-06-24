@@ -63,7 +63,7 @@ public class HSListen {
             estabas igualando usando el operador lógico en lugar
             del método equals()
             */
-            if (challenge != null && mode.equals("subscribe") && verify.equals("3EZ1bzD17Wc9nyEWOzvRRZ7rCO6_7Z17fwumV5YW55eqXhmpJ")){
+            if (challenge != null && mode.equals("subscribe") && verify.equals(verifyToken)){
                 ctx.result(challenge);       
                 
             }
